@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>password generator</title>
+</head>
+<body>
+    <div class="container">
+        <div class="output">
+            <h1 id="title">Password Generator</h1>
+            <div class="field">
+                <h2 id="password-output">PasswordGoesHere</h2>
+                <i id="copy-btn" class="fa-regular fa-copy"></i>
+            </div>
+        </div>
+        <div class="break">
+            <br>
+        </div>
+        <div class="settings">
+            <div class="length">
+                <p id="length-text">Length</p>
+                <input id="rangeInput" type="range" name="rangeInput" min="8" max="20" oninput="updateTextInput(this.value);">
+                <p id="textInput">14</p>
+            </div>
+            <div class="other-options">
+                <div class="check">
+                    <input id="upper-check" type="checkbox">
+                    <p>Include Uppercase</p>
+                </div>
+                <div class="check">
+                    <input id="num-check" type="checkbox">      
+                    <p>Include Numbers</p>              
+                </div>
+                <div class="check">
+                    <input id="sym-check" type="checkbox">     
+                    <p>Include Symbols</p>               
+                </div>
+            </div>
+            <div class="strength">
+                <p id="str">STRENGTH:</p>
+                <div class="strength-container">
+                    <h3 id="sc">...</h3>
+                </div>
+            </div>
+            <div class="gen-btn">
+                <button id="gen">GENERATE!</button>
+            </div>
+        </div>
+        <div class="break">
+            <br>
+        </div>
+        <div class="copied">
+            <h3 id="copy-flash">Copied!</h3>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
